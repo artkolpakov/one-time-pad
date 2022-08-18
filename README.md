@@ -32,7 +32,7 @@ dec_server & dec_client:
 
 Work exactly like enc_server and enc_client, except for the fact that dec_server decrypts the ciphertext passed to it using the passed ciphertext and key, and therefore returns the plaintext back to dec_client.
 
-syntax: dec_server <listening_port>, dec_client <plaintextFile> <keyFile> <port>
+syntax: dec_server ‹listening_port›, dec_client ‹ciphertextFile› ‹keyFile› ‹port›
 
 ---------------------------------------------
 
