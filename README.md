@@ -11,7 +11,7 @@ the connection to enc_server is coming from enc_client, then the child (version 
 receives plaintext and a key from enc_client via the connected socket. Using the obtained key, enc_server encrypts the plaintext, and then the enc_server 
 child writes the encrypted data back to the enc_client process to which it is connected via the same socket.
 
-Use this syntax for enc_server: enc_server <listening_port>
+Use this syntax for enc_server: enc_server ‹listening_port›
 
 ---------------------------------------------
 
@@ -22,7 +22,7 @@ characters are the 26 capital letters, and the space character), or the key file
 then it terminates, sending appropriate error text to stderr, and setting the exit value to 1. If all the data enc_client obtains from the key and plaintext files is valid, then enc_client starts sending the key and 
 plaintext for encryption to enc_server. After enc_server does the encryption and sends the encrypted data back, enc_client receives the ciphertext from enc_server and writes it to standard output.
 
-Use this syntax for enc_client: enc_client <plaintextFile> <keyFile> <port>
+Use this syntax for enc_client: enc_client ‹plaintextFile› ‹keyFile› ‹port›
 
 where port is the port that enc_client should attempt to connect to enc_server on, plaintextFile is a file that contains plaintext to get encrypted (I provided an example one), and keyFile is a file that contains the key.
 
@@ -40,7 +40,7 @@ keygen:
 
 Generates a random key (which is then used for encryption/decryption) of the specified length.
 
-Use this syntax for keygen: keygen <keylength>
+Use this syntax for keygen: keygen ‹keylength›
 
 ---------------------------------------------
 
